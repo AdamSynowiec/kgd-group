@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Ul = ({ children, className = '' }) => {
+const Ul = ({ children, className = '', aos, delay }) => {
     return (
-        <ul className={`list-disc ml-[44px] ${className}`}>
+        <ul data-aos={aos} data-aos-delay={delay} data-aos-anchor-placement="top-bottom" className={`list-disc ml-[44px] ${className}`}>
             {children}
         </ul>
     )

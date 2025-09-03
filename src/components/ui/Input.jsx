@@ -1,9 +1,11 @@
 import React from 'react'
 
-const Input = ({ type = 'text', placeholder = '' }) => {
+const Input = ({ type = 'text', placeholder = '', name = '', onChange }) => {
     return (
         <input
+            name={name}
             type={type}
+            onChange={onChange}
             placeholder={placeholder}
             className="
             bg-[#FFFFFF]

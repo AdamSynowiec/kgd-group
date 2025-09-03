@@ -16,23 +16,39 @@ import { useLocation } from 'react-router-dom'
 import heroBg from '../../assets/images/Pylna_TOP_01.png';
 import H3 from '../ui/H3'
 import Button from '../ui/Button'
+import { Helmet } from 'react-helmet'
+import logo from '../../assets/logo/KGD-Builing-logo.svg'
 
 const Deweloper = () => {
     const { pathname } = useLocation();
+
+    const menuData = [
+        { label: 'WSPÓŁPRACA', to: '#wspolpraca' },
+        { label: 'WSPARCIE', to: '#wsparcie' },
+        { label: 'TWOJE KORZYŚCI', to: '#twoje_korzysci' },
+        { label: 'KONTAKT', to: '#kontakt' },
+    ];
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [pathname]);
     return (
         <div className='overflow-x-hidden'>
-            <NavBar />
+
+            <Helmet>
+                <title>KGD-Group :: Strategicze Doradztwo dla Inwestycji Deweloperskich</title>
+                <meta name="description" content="KGD-Group oferuje profesjonalne doradztwo dla inwestycji deweloperskich, wspierając firmy w planowaniu, finansowaniu i realizacji projektów mieszkaniowych i komercyjnych." />
+                <meta name="keywords" content="KGD-Group, doradztwo inwestycyjne, inwestycje deweloperskie, wsparcie deweloperów, planowanie projektów, finansowanie inwestycji" />
+            </Helmet>
+
+            <NavBar logo={logo} menuData={menuData} />
             <Hero
                 bg={heroBg}
                 header="STRATEGICZNE DORADZTWO DLA INWESTYCJI DEWELOPERSKICH."
                 subHeader="Profesjonalne wsparcie deweloperów w procesie inwestycyjnym."
             />
             <Container>
-
+                <div id="wspolpraca" />
                 <H2 className="text-center" separator={false}>DLACZEGO WARTO Z NAMI WSPÓŁPRACOWAĆ?</H2>
 
             </Container>
@@ -58,6 +74,7 @@ const Deweloper = () => {
             <FeatureImage src={dom} title="KGD" subtitle="KGD to doświadczenie, jakość i lokalizacje z potencjałem – tworzymy unikalne projekty mieszkaniowe w segmencie premium." />
 
             <Container>
+                <div id="wsparcie" />
                 <H2 className="text-center" separator={false}>NASZE WSPARCIE OBEJMUJE</H2>
             </Container>
 
@@ -120,7 +137,7 @@ const Deweloper = () => {
             </Container>
 
             <Container>
-
+                <div id="twoje_korzysci" />
                 <H2 className="text-center" separator={true}>Twoje korzyści</H2>
                 <Ul>
                     <Li>Oszczędność czasu - nie musisz być codziennie na budowie</Li>
@@ -138,7 +155,7 @@ const Deweloper = () => {
             <Container className='bg-[#C9AB8B] mt-[120px]'>
                 <H3 className='!font-extralight text-center text-white mb-[60px] lg:mb-[120px]'>Skorzystaj z bezpłatnej konsultacji. Omówimy Twoje potrzeby i zaproponujemy najlepsze rozwiązania dla Twojego projektu.</H3>
                 <Section className='flex justify-center'>
-                    <Button className="max-w-[620px]" type="secondary">Zadzwoń (+48) 607 186 161</Button>
+                    <Button className="max-w-[620px]" type="secondary">Zadzwoń (+48) 533 087 918</Button>
                 </Section>
             </Container>
 
