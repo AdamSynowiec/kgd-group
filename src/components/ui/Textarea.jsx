@@ -13,12 +13,12 @@ const Textarea = ({ value, onChange, placeholder, name }) => {
                 font-regular 
                 text-black
 
-                border-b-[5px] 
+                border-b-[3px] 
                 border-[#C9AB8B]
 
-                text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px]
+                sm:text-[16px] md:text-[18px] 
                 px-[10px] sm:px-[12px] md:px-[14px] lg:px-[16px] xl:px-[18px]
-                min-h-[180px] sm:min-h-[220px] md:min-h-[300px] lg:min-h-[360px] xl:min-h-[420px]
+                min-h-[180px] sm:min-h-[220px] md:min-h-[300px] xl:min-h-[220px]
                 w-full
             "
         />

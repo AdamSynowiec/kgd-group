@@ -82,7 +82,7 @@ const NavBar = ({ logo, menuData }) => {
 
                 {/* Navigation Section - Desktop */}
                 <nav className="hidden xl:flex items-center space-x-8 text-white text-[16px] relative">
-                    <ul className="flex space-x-8">{renderMenu(menuData)}</ul>
+                    <ul className="flex space-x-4">{renderMenu(menuData)}</ul>
                 </nav>
 
                 <div className="hidden xl:block font-poppins text-white font-light">

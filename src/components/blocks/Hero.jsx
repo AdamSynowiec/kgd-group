@@ -1,5 +1,4 @@
 import React from 'react';
-import heroBg from '../../assets/images/Pylna_Dom_5_b 3.png';
 import H1 from '../ui/H1';
 import P from '../ui/P';
 import { Link } from 'react-router-dom';
@@ -26,9 +25,9 @@ const Hero = ({ bg = heroBg, header, subHeader }) => {
             }}
         >
             <div className="container max-w-[1596px] mx-auto px-6 min-h-svh flex flex-col justify-center text-white relative">
-                <div className="">
-                    <H1 className='max-w-[1380px]'>{header}</H1>
-                    <P className='max-w-[795px] text-white'>{subHeader}</P>
+                <div className="mx-auto md:max-w-9/10">
+                    <H1 className='md:mb-[32.0px] md:mb-[40px]'>{header}</H1>
+                    <P className='text-white'>{subHeader}</P>
                 </div>
                 <div className="absolute bottom-[70px] left-6 right-6 flex flex-row justify-between">
                     <div className="">

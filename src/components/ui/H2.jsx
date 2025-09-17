@@ -17,7 +17,7 @@ const H2 = ({ children, separator, className = '', aos, delay }) => {
             {separator ? (
                 <>
                     <h2 className={combinedClass} data-aos={aos} data-aos-delay={delay} data-aos-anchor-placement="top-bottom">{children}</h2>
-                    <Separator aos={aos} delay={delay} className="mx-auto" />
+                    <Separator aos={aos} delay={delay} className="mx-auto my-[32.0px] md:my-[40px]" />
                 </>
             ) : (
                 <h2 className={combinedClass} data-aos={aos} data-aos-delay={delay} data-aos-anchor-placement="top-bottom">{children}</h2>

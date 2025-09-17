@@ -51,7 +51,10 @@ const Individual = () => {
 
             <Container>
                 <div id="wspolpraca" />
-                <H2 className="text-center" separator={true}>DLACZEGO WARTO Z NAMI WSPÓŁPRACOWAĆ?</H2>
+                <Section className='py-[32.0px] md:py-[40px] md:py-[80px]'>
+                    <H2 className="text-center" separator={false}>DLACZEGO WARTO Z NAMI WSPÓŁPRACOWAĆ?</H2>
+                </Section>
+
 
             </Container>
 
@@ -79,12 +82,13 @@ const Individual = () => {
 
             <Container>
                 <div id="wsparcie" />
-                <H2 className="text-center" separator={true}>TAK MOŻEMY CI POMÓC</H2>
-                <P className='!font-semibold'>Wybierz pełny pakiet wsparcia lub zdecyduj, w którym z obszarów potrzebujesz doradztwa.</P>
-                <Feature
-                    icon={1}
-                    header="Projekt i Pozwolenie na budowę (PNB)"
-                    content="
+                <Section className='py-[32.0px] md:py-[40px] md:py-[80px]'>
+                    <H2 className="text-center" separator={true}>TAK MOŻEMY CI POMÓC</H2>
+                    <P className='!font-semibold'>Wybierz pełny pakiet wsparcia lub zdecyduj, w którym z obszarów potrzebujesz doradztwa.</P>
+                    <Feature
+                        icon={1}
+                        header="Projekt i Pozwolenie na budowę (PNB)"
+                        content="
                         <ul class='list-disc pl-6'>
                             <li>Oferujemy wieloletnie doświadczenie w analizie i audycie działek</li>
                             <li>Sprawdzamy projekt i optymalizujemy go pod kątem rentowności</li>
@@ -95,11 +99,11 @@ const Individual = () => {
                             <li>Pomożemy w procesie uzyskania PNB, uzgodnień i formalności urzędowych</li>
                         </ul>
                     "
-                />
-                <Feature
-                    icon={2}
-                    header="Marketing i Sprzedaż"
-                    content="
+                    />
+                    <Feature
+                        icon={2}
+                        header="Marketing i Sprzedaż"
+                        content="
                         <ul class='list-disc pl-6'>
                             <li>Tworzymy identyfikację wizualną inwestycji wraz z nazwą, stroną internetową</li>
                             <li>Ustalamy efektywną strategię sprzedażową</li>
@@ -110,11 +114,11 @@ const Individual = () => {
                             <li>Regularne raporty sprzedażowe pomagające w podejmowaniu decyzji</li>
                         </ul>
                     "
-                />
-                <Feature
-                    icon={3}
-                    header="Budowa"
-                    content="
+                    />
+                    <Feature
+                        icon={3}
+                        header="Budowa"
+                        content="
                         <ul class='list-disc pl-6'>
                             <li>Współpraca ze sprawdzonymi wykonawcami gwarantującymi jakość</li>
                             <li>Stały nadzór nad przebiegiem prac i kosztami</li>
@@ -123,11 +127,11 @@ const Individual = () => {
                             <li>Terminową realizację zgodną z harmonogramem</li>
                         </ul>
                     "
-                />
-                <Feature
-                    icon={4}
-                    header="Obsługa prawna i księgowa"
-                    content="
+                    />
+                    <Feature
+                        icon={4}
+                        header="Obsługa prawna i księgowa"
+                        content="
                         <ul class='list-disc pl-6'>
                             <li>Zapewniamy dostęp do wyspecjalizowanych doradców z doświadczeniem w zakresie bezpiecznych rozwiązań prawnych dla deweloperów</li>
                             <li>Pomagamy w sporządzeniu projektu umowy deweloperskiej</li>
@@ -136,11 +140,11 @@ const Individual = () => {
                             <li>Pomożemy w kwestiach księgowych oraz rozliczeniowych</li>
                         </ul>
                     "
-                />
-                <Feature
-                    icon={5}
-                    header="Obsługa finansowa"
-                    content="
+                    />
+                    <Feature
+                        icon={5}
+                        header="Obsługa finansowa"
+                        content="
                         <ul class='list-disc pl-6'>
                             <li>Zapewniamy wsparcie specjalistów w pozyskaniu kredytu deweloperskiego i planowaniu obsługi rachunków powierniczych</li>
                             <li>Proponujemy rozwiązania w zakresie tworzenia opłacalnego biznesplanu oraz operatu szacunkowego</li>
@@ -148,11 +152,11 @@ const Individual = () => {
                             <li>Dobieramy rozwiązania finansowe pozwalające stworzyć konkurencyjną ofertę na rynku nieruchomości</li>
                         </ul>
                     "
-                />
-                <Feature
-                    icon={6}
-                    header="Odbiory i rozliczenie inwestycji"
-                    content="
+                    />
+                    <Feature
+                        icon={6}
+                        header="Odbiory i rozliczenie inwestycji"
+                        content="
                         <ul class='list-disc pl-6'>
                             <li>Profesjonalne przygotowanie do odbiorów technicznych</li>
                             <li>Sprawną koordynację przekazywania mieszkań</li>
@@ -161,11 +165,11 @@ const Individual = () => {
                             <li>Budowanie pozytywnych relacji z klientami</li>
                         </ul>
                     "
-                />
-                <Feature
-                    icon={7}
-                    header="Wykończenie pod klucz"
-                    content="
+                    />
+                    <Feature
+                        icon={7}
+                        header="Wykończenie pod klucz"
+                        content="
                         <p>Kompleksowym wykończeniem wnętrz zajmuje się TEC Remodeling, który jest częścią TEC Group. Firma ma za sobą ponad 400 zrealizowanych remontów oraz wykończeń. Posiadamy nowoczesny sprzęt, zaplecze logistyczne oraz duży zespół specjalistów i fachowców branżowych. Dysponujemy własnych biurem architektonicznym TEC Architects, które zaprojektuje designerskie i funkcjonalne wnętrza wg. Twoich wytycznych.</p>
                         <ul class='list-disc pl-6'>
                             <li>Kompleksowa realizacja wykończenia mieszkań</li>
@@ -176,29 +180,34 @@ const Individual = () => {
                         </ul>
 
                     "
-                />
+                    />
+                </Section>
             </Container>
             <Container>
                 <div id="twoje_korzysci" />
-                <H2 className="text-center" separator={true}>TWOJE KORZYŚCI</H2>
-                <P>Twój sukces na rynku deweloperskim jest naszym priorytetem. Przejmujemy na siebie wszystkie złożone aspekty procesu inwestycyjnego, byś mógł skupić się na strategicznych decyzjach i rozwoju swojego biznesu.</P>
-                <Ul>
-                    <Li>Oszczędność czasu i energii - zajmujemy się wszystkimi szczegółami</Li>
-                    <Li>Większy zysk dzięki optymalizacji kosztów i sprawnej sprzedaży</Li>
-                    <Li>Minimalizacja ryzyka dzięki naszemu doświadczeniu</Li>
-                    <Li>Terminowa realizacja zgodna z założeniami</Li>
-                    <Li>Zadowoleni klienci i pozytywne referencje</Li>
-                    <Li>Solidne podstawy do kolejnych inwestycji</Li>
-                </Ul>
+                <Section className='mb-[80px]'>
+                    <H2 className="text-center" separator={true}>TWOJE KORZYŚCI</H2>
+                    <P className='mb-[32.0px] md:mb-[40px]'>Twój sukces na rynku deweloperskim jest naszym priorytetem. Przejmujemy na siebie wszystkie złożone aspekty procesu inwestycyjnego, byś mógł skupić się na strategicznych decyzjach i rozwoju swojego biznesu.</P>
+                    <Ul>
+                        <Li>Oszczędność czasu i energii - zajmujemy się wszystkimi szczegółami</Li>
+                        <Li>Większy zysk dzięki optymalizacji kosztów i sprawnej sprzedaży</Li>
+                        <Li>Minimalizacja ryzyka dzięki naszemu doświadczeniu</Li>
+                        <Li>Terminowa realizacja zgodna z założeniami</Li>
+                        <Li>Zadowoleni klienci i pozytywne referencje</Li>
+                        <Li>Solidne podstawy do kolejnych inwestycji</Li>
+                    </Ul>
+                </Section>
             </Container>
 
             <FeatureImage src={dom} title="Korzyści ze współpracy z KGD" subtitle="Kompleksowe wsparcie inwestycji – oszczędność czasu, większy zysk, mniejsze ryzyko i wysoka jakość realizacji, która buduje Twoją markę." />
 
             <Section className='bg-[#C9AB8B]'>
                 <Container>
-                    <H3 className='!font-extralight text-center text-white'>Skorzystaj z naszego doświadczenia i zrealizuj swoją inwestycję jak profesjonalista. Umów się na bezpłatną konsultację, podczas której omówimy Twój projekt i przedstawimy konkretne rozwiązania</H3>
-                    <Section className='flex justify-center'>
-                        <Button className="max-w-[620px]" type="secondary">Zadzwoń (+48) 533 087 918</Button>
+                    <Section className='py-[32.0px] md:py-[40px] md:py-[80px]'>
+                        <H3 className='!font-extralight text-center text-white  mb-[32.0px] md:mb-[40px]'>Skorzystaj z naszego doświadczenia i zrealizuj swoją inwestycję jak profesjonalista. Umów się na bezpłatną konsultację, podczas której omówimy Twój projekt i przedstawimy konkretne rozwiązania</H3>
+                        <Section className='flex justify-center'>
+                            <Button className="max-w-[620px]" type="secondary">Zadzwoń (+48) 533 087 918</Button>
+                        </Section>
                     </Section>
                 </Container>
             </Section>

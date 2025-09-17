@@ -11,7 +11,7 @@ const ImageCard = ({ src, title, subtitle, link }) => {
       if (!containerRef.current) return
 
       // Sprawdź szerokość okna
-      if (window.innerWidth < 768) {
+      if (window.innerWidth < 1024) {
         setOffset(0) // bez paralaksy na mobile
         return
       }
@@ -36,7 +36,7 @@ const ImageCard = ({ src, title, subtitle, link }) => {
 
   return (
     <>
-      <div ref={containerRef} className="relative w-full overflow-hidden rounded-[30px] sm:rounded-[40px] md:rounded-[50px]">
+      <div ref={containerRef} className="py-[32.0px] md:py-[40px] relative w-full overflow-hidden rounded-[30px] sm:rounded-[40px] md:rounded-[50px]">
         {/* Image + Gradient */}
         <div
           data-aos={"fade-up"}
@@ -76,7 +76,7 @@ const ImageCard = ({ src, title, subtitle, link }) => {
       </div>
 
       {/* Mobile Text */}
-      <div className="block sm:hidden relative z-10">
+      <div className="pb-[32.0px] md:pb-[40px] block sm:hidden relative z-10">
         <H3 className="text-white  md:">{title}</H3>
         <P className="text-white max-w-full sm:max-w-[600px] md:max-w-[800px] lg:max-w-[1172px]">
           {subtitle}

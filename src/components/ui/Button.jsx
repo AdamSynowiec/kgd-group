@@ -13,8 +13,7 @@ const Button = ({ children, type = 'primary', className = '' }) => {
                     
                     sm:text-[16px] 
                     md:text-[18px] 
-                    lg:text-[26px] 
-                    xl:text-[32px] 
+
                     
                     sm:px-[12px] 
                     md:px-[12px] 
@@ -23,10 +22,7 @@ const Button = ({ children, type = 'primary', className = '' }) => {
                     
                     w-full 
                     min-h-[60px]
-                    sm:min-h-[80px]
-                    md:min-h-[100px]
-                    lg:min-h-[100px]
-                    xl:min-h-[100px]
+
                     ${className}
                 `}>
                     {children}

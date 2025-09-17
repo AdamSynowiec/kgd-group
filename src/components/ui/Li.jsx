@@ -2,7 +2,14 @@ import React from 'react'
 
 const Li = ({ children }) => {
     return (
-        <li className="font-poppins font-light text-[#949494] text-[18px]/[36px]">
+        <li className="  font-montserrat
+  font-light
+  text-[#717171]
+  text-[18px]/[32px]
+  sm:text-[18px]/[32px]
+  md:text-[32px]/[36px]
+  lg:text-[22px]/[40px]
+  xl:text-[24px]/[44px]">
             {children}
         </li>
     )

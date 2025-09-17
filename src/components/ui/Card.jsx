@@ -11,14 +11,14 @@ const Card = ({ icon, header, content, aosDelay }) => {
             <img src={icon}
                 data-aos="fade-up"
                 data-aos-delay={aosDelay * 2}
-                className="h-[64px]"
+                className="h-[64px] mb-[32px]"
             />
 
             {/* Nagłówek */}
             <span
                 data-aos="fade-up"
                 data-aos-delay={aosDelay * 3}
-                className="text-base sm:text-lg md:text-xl text-[#717171] font-normal font-poppins text-center px-4 sm:px-0"
+                className="text-base sm:text-lg md:text-xl text-[#717171] font-normal font-poppins text-center px-4 sm:px-0 mb-[12px]"
                 dangerouslySetInnerHTML={{ __html: header }}
             />
 

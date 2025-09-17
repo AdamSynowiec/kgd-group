@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import logo from '../../assets/logo/KGD logo.svg';
+import H2 from '../ui/H2';
 
 const FeatureCard = ({
     key,
@@ -60,15 +61,15 @@ const FeatureCard = ({
                 <img src={logo} alt="" className='absolute w-[50px] right-4 bottom-4' />
             </div>
 
-            <div className="p-[32px] border-l border-b border-r border-[#e2e0e0] transition-all flex-1 flex flex-col justify-between bg-white">
-                <div>
-                    <h2 className='font-poppins text-xl'>{title}</h2>
-                    <span className='font-montserrat block'>{location}</span>
+            <div className="p-[32.0px] border-l border-b border-r border-[#e2e0e0] transition-all flex-1 flex flex-col justify-between bg-white">
+                <div className='pb-[32.0px]'>
+                    <H2 className='mb-2 md:!text-[20px]'>{title}</H2>
+                    <span className='font-montserrat block mb-1 font-semibold text-[#717171]'>{location}</span>
                     {renderFeatures()}
                 </div>
-                {link ? <a href={link || "#"} className="pt-[32px] font-montserrat border-t border-[#e2e0e0] text-left hover:underline  cursor-pointer">
+                {link ? <a href={link || "#"} className="text-[#696969] pt-[32.0px] font-montserrat border-t border-[#e2e0e0] text-left hover:underline  cursor-pointer">
                     Zobacz szczegóły inwestycji →
-                </a> : <span className="pt-[32px] font-montserrat border-t border-[#e2e0e0] text-left">
+                </a> : <span className="text-[#696969] pt-[32.0px] font-montserrat border-t border-[#e2e0e0] text-left">
                     Zobacz szczegóły inwestycji →
                 </span>}
             </div>
