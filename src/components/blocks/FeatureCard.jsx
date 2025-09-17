@@ -1,40 +1,40 @@
-import React, { useEffect } from 'react'
-import H3 from '../ui/H3'
-import Ul from '../ui/Ul'
-import Li from '../ui/Li'
-import A from '../ui/A'
-import Span from '../ui/Span'
+import React, { useRef } from 'react'
+import logo from '../../assets/logo/KGD logo.svg';
 
 const FeatureCard = ({
+    key,
     title,
     location,
-    features, // może być tablica lub rich text
+    features,
     link,
     linkLabel,
     imgSrc,
     imgAlt,
-    investmentDate
+    investmentDate,
+    animationDelay
 }) => {
+
     const renderFeatures = () => {
         if (Array.isArray(features)) {
             return (
-                <Ul className="py-8 sm:py-12 md:py-[73px]">
+                <ul className="">
                     {features.map((feature, idx) => (
-                        <Li key={idx}>{feature}</Li>
+                        <li key={idx}>{feature}</li>
                     ))}
-                </Ul>
+                </ul>
             )
         } else if (typeof features === 'string') {
             return (
                 <div
-                    className="py-8 sm:py-12 md:py-[73px] text-gray-600 font-sans
+                    className="text-gray-600 font-sans
              [&_ul]:list-disc
              [&_ul]:ml-4
-             [&_li]:mb-2 
              [&_p]:m-0 
-             [&_li]:text-[21px]/[42px]
+             [&_li]:text-[14px]/[24px]
+             [&_li]:text-[#717171]
+             [&_span]:text-[#717171]
+             [&_p]:text-[#717171]
              [&_li]:font-poppins
-             [&_li]:font-extralight
              "
                     dangerouslySetInnerHTML={{ __html: features }}
                 />
@@ -45,47 +45,36 @@ const FeatureCard = ({
     }
 
     return (
-        <div
+        <div className="h-full flex flex-col"
             data-aos={"fade-up"}
-            data-aos-delay={200}
+            data-aos-delay={100}
             data-aos-anchor-placement="top-bottom"
-            className="grid grid-cols-12 items-center gap-4 md:gap-6 lg:gap-8">
-            {/* Tekst */}
-            <div className="col-span-12 lg:col-span-7">
-                <H3>{title || ""}</H3>
-                <Span>{location || ""}</Span>
-                <Span>{" - " + investmentDate || ""}</Span>
-                {renderFeatures()}
-                <A href={link} target="_blank" rel="noopener noreferrer">
-                    {linkLabel || link || ""}
-                </A>
+        >
+            {/* Wrapper dla obrazu z zachowaniem proporcji */}
+            <div className="relative w-full pb-[56.25%] overflow-hidden bg-gray-200">
+                <img
+                    src={imgSrc}
+                    alt={imgAlt}
+                    className="absolute top-0 left-0 w-full h-full object-cover"
+                />
+                <img src={logo} alt="" className='absolute w-[50px] right-4 bottom-4' />
             </div>
 
-            {/* Obraz */}
-            <div className="col-span-12 lg:col-span-5">
-                <div
-                    className="w-full relative overflow-hidden"
-                    style={{
-                        paddingTop: `${(753 / 798) * 100}%`, // proporcja 798x753
-                        borderRadius: '50px', // teraz na pewno jest
-                    }}
-                >
-                    <img
-                        src={imgSrc}
-                        alt={imgAlt}
-                        style={{
-                            position: 'absolute',
-                            top: 0,
-                            left: 0,
-                            width: '100%',
-                            height: '100%',
-                            objectFit: 'cover', // wypełnia kontener, zachowuje proporcje
-                            borderRadius: '50px', // dla pełnej pewności
-                        }}
-                    />
+            <div className="p-[32px] border-l border-b border-r border-[#e2e0e0] transition-all flex-1 flex flex-col justify-between bg-white">
+                <div>
+                    <h2 className='font-poppins text-xl'>{title}</h2>
+                    <span className='font-montserrat block'>{location}</span>
+                    {renderFeatures()}
                 </div>
+                {link ? <a href={link || "#"} className="pt-[32px] font-montserrat border-t border-[#e2e0e0] text-left hover:underline  cursor-pointer">
+                    Zobacz szczegóły inwestycji →
+                </a> : <span className="pt-[32px] font-montserrat border-t border-[#e2e0e0] text-left">
+                    Zobacz szczegóły inwestycji →
+                </span>}
             </div>
         </div>
+
+
     )
 }
 

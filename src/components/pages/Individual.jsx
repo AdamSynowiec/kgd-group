@@ -35,7 +35,7 @@ const Individual = () => {
         window.scrollTo(0, 0);
     }, [pathname]);
     return (
-        <div className='overflow-x-hidden'>
+        <Section className='overflow-x-hidden'>
             <Helmet>
                 <title>KGD-Group :: Doradztwo w procesie budowy domu</title>
                 <meta name="description" content="KGD-Group oferuje profesjonalne doradztwo w procesie budowy domu – od planowania, przez finansowanie, aż po nadzór inwestycji, aby Twoja budowa przebiegała sprawnie i bezpiecznie." />
@@ -80,7 +80,7 @@ const Individual = () => {
             <Container>
                 <div id="wsparcie" />
                 <H2 className="text-center" separator={true}>TAK MOŻEMY CI POMÓC</H2>
-                <P className='!font-semibold mb-[120px]'>Wybierz pełny pakiet wsparcia lub zdecyduj, w którym z obszarów potrzebujesz doradztwa.</P>
+                <P className='!font-semibold'>Wybierz pełny pakiet wsparcia lub zdecyduj, w którym z obszarów potrzebujesz doradztwa.</P>
                 <Feature
                     icon={1}
                     header="Projekt i Pozwolenie na budowę (PNB)"
@@ -194,16 +194,17 @@ const Individual = () => {
 
             <FeatureImage src={dom} title="Korzyści ze współpracy z KGD" subtitle="Kompleksowe wsparcie inwestycji – oszczędność czasu, większy zysk, mniejsze ryzyko i wysoka jakość realizacji, która buduje Twoją markę." />
 
-            <Container className='bg-[#C9AB8B] mt-[120px]'>
-                <H3 className='!font-extralight text-center text-white mb-[60px] lg:mb-[120px]'>Skorzystaj z naszego doświadczenia i zrealizuj swoją inwestycję jak profesjonalista. Umów się na bezpłatną konsultację, podczas której omówimy Twój projekt i przedstawimy konkretne rozwiązania</H3>
-                <Section className='flex justify-center'>
-                    <Button className="max-w-[620px]" type="secondary">Zadzwoń (+48) 533 087 918</Button>
-                </Section>
-            </Container>
-
+            <Section className='bg-[#C9AB8B]'>
+                <Container>
+                    <H3 className='!font-extralight text-center text-white'>Skorzystaj z naszego doświadczenia i zrealizuj swoją inwestycję jak profesjonalista. Umów się na bezpłatną konsultację, podczas której omówimy Twój projekt i przedstawimy konkretne rozwiązania</H3>
+                    <Section className='flex justify-center'>
+                        <Button className="max-w-[620px]" type="secondary">Zadzwoń (+48) 533 087 918</Button>
+                    </Section>
+                </Container>
+            </Section>
             <Contact />
             <Footer />
-        </div>
+        </Section>
     )
 }
 

@@ -49,9 +49,9 @@ const NavBar = ({ logo, menuData }) => {
                         <ul
                             className={`${isMobile
                                 ? isOpen
-                                    ? 'block mt-2 ml-4'
+                                    ? 'block ml-4'
                                     : 'hidden'
-                                : 'absolute top-full left-0 mt-2 bg-[#000]/60 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 min-w-[150px]'
+                                : 'absolute top-full left-0 bg-[#000]/60 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 min-w-[150px]'
                                 }`}
                         >
                             {renderMenu(item.children, isMobile)}
@@ -74,7 +74,7 @@ const NavBar = ({ logo, menuData }) => {
                         <img
                             src={logo}
                             alt="Logo"
-                            className={`transition-all duration-300 ${isScrolled ? 'h-[35px] lg:h-[52px]' : 'h-[40px] lg:h-[62px]'
+                            className={`transition-all duration-300 ${isScrolled ? 'h-[35px] lg:h-[52px]' : 'h-[40px] lg:h-[52px]'
                                 }`}
                         />
                     </HashLink>

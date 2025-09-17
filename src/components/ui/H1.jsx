@@ -4,8 +4,8 @@ const H1 = ({ children, className = '' }) => {
   return (
     <h1
       className={`
+         text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl
         text-white
-        text-[36px] sm:text-[48px] md:text-[64px] lg:text-[72px] xl:text-[84px]
         font-bold
         font-poppins
         ${className}

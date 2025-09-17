@@ -33,7 +33,7 @@ const Deweloper = () => {
         window.scrollTo(0, 0);
     }, [pathname]);
     return (
-        <div className='overflow-x-hidden'>
+        <Section className='overflow-x-hidden'>
 
             <Helmet>
                 <title>KGD-Group :: Strategicze Doradztwo dla Inwestycji Deweloperskich</title>
@@ -152,16 +152,18 @@ const Deweloper = () => {
 
             <FeatureImage src={dom} title="KGD" subtitle="KGD to doświadczenie, jakość i lokalizacje z potencjałem – tworzymy unikalne projekty mieszkaniowe w segmencie premium." />
 
-            <Container className='bg-[#C9AB8B] mt-[120px]'>
-                <H3 className='!font-extralight text-center text-white mb-[60px] lg:mb-[120px]'>Skorzystaj z bezpłatnej konsultacji. Omówimy Twoje potrzeby i zaproponujemy najlepsze rozwiązania dla Twojego projektu.</H3>
-                <Section className='flex justify-center'>
-                    <Button className="max-w-[620px]" type="secondary">Zadzwoń (+48) 533 087 918</Button>
-                </Section>
-            </Container>
+            <Section className='bg-[#C9AB8B]'>
+                <Container>
+                    <H3 className='!font-extralight text-center text-white'>Skorzystaj z bezpłatnej konsultacji. Omówimy Twoje potrzeby i zaproponujemy najlepsze rozwiązania dla Twojego projektu.</H3>
+                    <Section className='flex justify-center'>
+                        <Button className="max-w-[620px]" type="secondary">Zadzwoń (+48) 533 087 918</Button>
+                    </Section>
+                </Container>
+            </Section>
 
             <Contact />
             <Footer />
-        </div>
+        </Section>
     )
 }
 

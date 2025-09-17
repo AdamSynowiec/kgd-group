@@ -3,15 +3,13 @@ import Separator from './Separator'
 
 const H2 = ({ children, separator, className = '', aos, delay }) => {
     const baseClass = `
+    text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-semibold leading-[1.25]
     text-[#C9AB8B]
-    text-[32px]/[52px]
-    sm:text-[56px]/[72px]
-    md:text-[72px]/[96px]
-    lg:text-[88px]/[120px]
-    xl:text-[96px]/[144px]
     font-bold
     font-poppins
-  `
+    `;
+
+
     const combinedClass = `${baseClass} ${className}`.trim()
 
     return (
@@ -19,7 +17,7 @@ const H2 = ({ children, separator, className = '', aos, delay }) => {
             {separator ? (
                 <>
                     <h2 className={combinedClass} data-aos={aos} data-aos-delay={delay} data-aos-anchor-placement="top-bottom">{children}</h2>
-                    <Separator aos={aos} delay={delay} className="mx-auto mt-[47px] mb-[66px]" />
+                    <Separator aos={aos} delay={delay} className="mx-auto" />
                 </>
             ) : (
                 <h2 className={combinedClass} data-aos={aos} data-aos-delay={delay} data-aos-anchor-placement="top-bottom">{children}</h2>

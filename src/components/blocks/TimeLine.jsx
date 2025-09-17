@@ -37,16 +37,16 @@ const TimeLine = ({ index, header, content, isLast = false }) => {
 
     return (
         <div className="relative">
-            <div className="flex flex-col lg:flex-row mb-[28px]">
+            <div className="flex flex-col lg:flex-row">
                 {/* Timeline circle + line */}
                 <div className="flex justify-center md:justify-start relative">
-                    <div className="aspect-square w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[200px] lg:h-[200px] bg-[#C9AB8B] rounded-[20px] lg:rounded-[50px] flex items-center justify-center z-10 mb-[32px] lg:mb-0">
-                        <H2 className="text-white">{index}</H2>
+                    <div className="aspect-square w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[100px] lg:h-[100px] bg-[#C9AB8B] rounded-[15px] flex items-center justify-center z-10">
+                        <H3 className="text-white">{index}</H3>
                     </div>
 
                     {/* Vertical line below the circle */}
                     {!isLast && (
-                        <div className="hidden lg:block absolute top-[210px] left-1/2 -translate-x-1/2 w-[10px] -bottom-[20px] bg-[#C9AB8B] z-0 rounded-lg" />
+                        <div className="hidden lg:block absolute top-[105px] left-1/2 -translate-x-1/2 w-[6px] -bottom-[20px] bg-[#C9AB8B] z-0 rounded-lg" />
                     )}
                 </div>
 

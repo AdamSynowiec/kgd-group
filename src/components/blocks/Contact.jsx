@@ -77,7 +77,7 @@ const Contact = () => {
             <div className="order-2 md:order-1 bg-[#1F1F24] py-16 sm:py-24 md:py-[120px] relative px-4 sm:px-6 md:px-10 lg:px-20 xl:px-[120px] 2xl:px-[162px]">
                 <div className="hidden md:block absolute bg-[#1F1F24] top-0 -left-[162px] bottom-0 w-[162px]" />
                 <H2 className="text-white">Kontakt</H2>
-                <div className="grid gap-6 mt-6">
+                <div className="grid gap-6">
                     <span className='
                         text-[#eee]
                         font-montserrat
@@ -104,7 +104,7 @@ const Contact = () => {
                         (+48) 518 451 555
                     </P>
                 </div>
-                <div className="mt-12">
+                <div className="">
                     <img src={logo} alt="KGD logo" className="w-[160px] sm:w-[200px]" />
                 </div>
             </div>

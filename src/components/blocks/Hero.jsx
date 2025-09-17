@@ -14,7 +14,7 @@ const Hero = ({ bg = heroBg, header, subHeader }) => {
                     linear-gradient(
                         to bottom,
                         rgba(62, 62, 62, 0.58) 35%,
-                        rgba(113, 113, 113, 0.19) 50%,
+                        rgba(0, 0, 0, 0.5) 50%,
                         rgba(30, 30, 30, 0.13) 100%
                     ),
                     url(${bg})
@@ -27,7 +27,7 @@ const Hero = ({ bg = heroBg, header, subHeader }) => {
         >
             <div className="container max-w-[1596px] mx-auto px-6 min-h-svh flex flex-col justify-center text-white relative">
                 <div className="">
-                    <H1 className='max-w-[1380px] mt-[120px]'>{header}</H1>
+                    <H1 className='max-w-[1380px]'>{header}</H1>
                     <P className='max-w-[795px] text-white'>{subHeader}</P>
                 </div>
                 <div className="absolute bottom-[70px] left-6 right-6 flex flex-row justify-between">
