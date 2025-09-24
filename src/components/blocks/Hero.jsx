@@ -7,27 +7,20 @@ import { HashLink } from 'react-router-hash-link';
 const Hero = ({ bg = heroBg, header, subHeader }) => {
     return (
         <div
-            className='lg:min-h-svh bg-slate-100'
+            className="lg:min-h-svh bg-slate-100 md:bg-fixed bg-cover bg-center bg-no-repeat"
             style={{
-                background: `
-                    linear-gradient(
-                        to bottom,
-                        rgba(62, 62, 62, 0.58) 35%,
-                        rgba(0, 0, 0, 0.5) 50%,
-                        rgba(30, 30, 30, 0.13) 100%
-                    ),
-                    url(${bg})
-                `,
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundAttachment: 'fixed',
+                backgroundImage: `linear-gradient(
+      to bottom,
+      rgba(62, 62, 62, 0.58) 35%,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(30, 30, 30, 0.13) 100%
+    ), url(${bg})`,
             }}
         >
             <div className="container max-w-[1596px] mx-auto px-6 min-h-svh flex flex-col justify-center text-white relative">
                 <div className="mx-auto md:max-w-9/10">
                     <H1 className='md:mb-[32.0px] md:mb-[40px]'>{header}</H1>
-                    <P className='text-white'>{subHeader}</P>
+                    <P className='text-white !text-[26px]/[44px]'>{subHeader}</P>
                 </div>
                 <div className="absolute bottom-[70px] left-6 right-6 flex flex-row justify-between">
                     <div className="">

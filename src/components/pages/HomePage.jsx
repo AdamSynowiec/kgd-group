@@ -9,7 +9,7 @@ import P from '../../components/ui/P'
 import A from '../../components/ui/A'
 import i1 from '../../assets/images/128.png'
 import dom from '../../assets/images/Pylna_Dom_3_a.png'
-import dom1 from '../../assets/images/image00003.png'
+import dom1 from '../../assets/images/image00014.png'
 import dom2 from '../../assets/images/image00018-min.png'
 import dom3 from '../../assets/images/image00007.png'
 import Card from '../../components/ui/Card'
@@ -28,14 +28,18 @@ import icon1 from '../../assets/icons/icon1.svg'
 import icon2 from '../../assets/icons/icon2.svg'
 import icon3 from '../../assets/icons/icon3.svg'
 import icon4 from '../../assets/icons/icon4.svg'
-import icon5 from '../../assets/icons/icon5.svg'
-import icon6 from '../../assets/icons/icon6.svg'
+import protectIcon from '../../assets/icons/protect.svg'
+import chartIcon from '../../assets/icons/chart.svg'
 import icon7 from '../../assets/icons/icon7.svg'
-import icon8 from '../../assets/icons/icon8.svg'
+import investmentsIcon from '../../assets/icons/investments.svg'
+import investmentsIcon2 from '../../assets/icons/investments2.svg'
 import icon9 from '../../assets/icons/icon9.svg'
 import icon10 from '../../assets/icons/icon10.svg'
-import icon11 from '../../assets/icons/icon11.svg'
-import icon12 from '../../assets/icons/icon12.svg'
+import lawIcn from '../../assets/icons/law.svg'
+import strategyIcon from '../../assets/icons/strategy.svg'
+import localizationIcon from '../../assets/icons/localization.svg'
+import documentIcon from '../../assets/icons/document.svg'
+import handshakeIcon from '../../assets/icons/handshake.svg'
 
 const HomePage = () => {
 
@@ -67,6 +71,10 @@ const HomePage = () => {
         },
         { label: 'KONTAKT', to: '#kontakt' },
     ];
+
+    const menuParams = {
+        phone: '(+48) 518 451 555'
+    }
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -106,7 +114,7 @@ const HomePage = () => {
 
     return (
         <Section className='overflow-x-hidden'>
-            <NavBar logo={logo} menuData={menuData} />
+            <NavBar logo={logo} menuData={menuData} menuParams={menuParams} />
             <Hero
                 bg={heroBg}
                 header="Luksusowe inwestycje w wyjątkowych lokalizacjach"
@@ -222,42 +230,42 @@ const HomePage = () => {
                             <Card
                                 aosDelay={100}
                                 header="Pełne bezpieczeństwo Twojego kapitału"
-                                icon={icon5}
+                                icon={protectIcon}
                             />
                             <Card
                                 aosDelay={100}
                                 header="Wysokie i gwarantowane stopy zwrotu"
-                                icon={icon6}
+                                icon={chartIcon}
                             />
                             <Card
                                 aosDelay={100}
                                 header="Topowe lokalizacje"
-                                icon={icon7}
+                                icon={localizationIcon}
                             />
                             <Card
                                 aosDelay={100}
                                 header="Zróżnicowane inwestycje"
-                                icon={icon8}
+                                icon={investmentsIcon2}
                             />
                             <Card
                                 aosDelay={100}
                                 header="Zespół doświadczonych fachowców"
-                                icon={icon9}
+                                icon={handshakeIcon}
                             />
                             <Card
                                 aosDelay={100}
                                 header="Prosty i przejrzysty model działania"
-                                icon={icon10}
+                                icon={documentIcon}
                             />
                             <Card
                                 aosDelay={100}
                                 header="Doradztwo prawne, księgowe i finansowe"
-                                icon={icon11}
+                                icon={lawIcn}
                             />
                             <Card
                                 aosDelay={100}
                                 header="Długoterminowa strategia inwestycyjna"
-                                icon={icon12}
+                                icon={strategyIcon}
                             />
                         </Section>
                         <Section className="flex justify-center items-center mt-[40px]">
@@ -269,43 +277,63 @@ const HomePage = () => {
                 </Container>
             </Section>
 
-            <Container>
-                <div id="zakup_gruntów" />
-                <Section className='py-[32.0px] md:py-[40px] md:py-[80px]'>
+            <div id="zakup_gruntów" />
+            <Section className='py-[32.0px] md:py-[40px] md:py-[80px]'>
+                <Container>
                     <H2 aos="fade-up" delay="100" className="text-center" separator={true}>Masz działkę, która może nas zainteresować?</H2>
                     <P className="mb-[32.0px] md:mb-[40px]" aos="fade-up" delay="200">
-                        Szukamy nowych gruntów inwestycyjnych w Krakowie i jego okolicach. Interesują nas działki przeznaczone pod zabudowę jednorodzinną, bliźniaczą oraz wielorodzinną – także z możliwością realizacji inwestycji mieszkaniowo-usługowych. Akceptujemy również działki zabudowane budynkami przeznaczonymi do wyburzenia.
+                        Szukamy gruntów inwestycyjnych w Krakowie i okolicach. Interesują nas
+                        działki pod zabudowę mieszkaniową i usługową – także te z budynkami do
+                        wyburzenia.
                     </P>
-                    <P className="mb-[32.0px] md:mb-[40px]" aos="fade-up" delay="200">
-                        Szczególnie poszukujemy terenów na Woli Justowskiej, w centrum i śródmieściu Krakowa. Rozważymy także inne lokalizacje w mieście, pod warunkiem dobrej komunikacji i dogodnego dojazdu.
-                    </P>
-                    <P className="mb-[32.0px] md:mb-[40px]" aos="fade-up" delay="200">
-                        Oferujemy elastyczne warunki współpracy. Możemy odkupić działkę lub zaproponować jej wymianę na mieszkanie, lokal usługowy albo dom wybudowany przez naszą firmę. Dbamy o wszystkie formalności, a każdą ofertę dopasowujemy indywidualnie, tak aby była korzystna i wygodna dla właściciela.
-                    </P>
-                    <P className="mb-[32.0px] md:mb-[40px]" aos="fade-up" delay="200">
-                        Jeśli jesteś właścicielem działki lub masz wiedzę o atrakcyjnych gruntach w Krakowie, zapraszamy do kontaktu. Razem możemy stworzyć inwestycję, która przyniesie obopólne korzyści.
-                    </P>
-                    <Section className="flex items-center justify-center">
-                        <HashLink smooth to="/#kontakt" className='
+                </Container>
+                <Section className="py-[32.0px] md:py-[40px] md:py-[80px] grid girid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full gap-[4px] divide-x divide-[#eee]">
+                    <Card
+                        aosDelay={100}
+                        header="Lokalizacja"
+                        content={'Szczególnie interesuje nas Kraków i okolice.'}
+                        icon={localizationIcon}
+                    />
+                    <Card
+                        aosDelay={150}
+                        header="Elastyczność"
+                        content={'Odkupimy działkę lub wymienimy na mieszkanie czy dom.'}
+                        icon={investmentsIcon2}
+                    />
+                    <Card
+                        aosDelay={200}
+                        header="Formalności"
+                        content={'Dbamy o wszystkie procedury, Ty zyskujesz czas i spokój.'}
+                        icon={documentIcon}
+                    />
+                    <Card
+                        aosDelay={250}
+                        header="Indywidualne podejście"
+                        content={'Każdą ofertę dopasowujemy do potrzeb właściciela.'}
+                        icon={handshakeIcon}
+                    />
+                </Section>
+                <Section className="flex items-center justify-center flex-col md:flex-row gap-4">
+                    <HashLink smooth to="/#kontakt" className='
                        font-montserrat inline-block px-5 py-2 rounded-lg bg-[#C9AB8B] text-white font-semibold hover:bg-[#b09274] transition-colors duration-300 w-fit transform hover:scale-105 hover:shadow-lg
                         '>Skontaktuj się z nami</HashLink>
-                        <span className='px-4 font-poppins text-[#717171]'>lub</span>
-                        <HashLink smooth to="/#kontakt" className='
+                    <span className='font-poppins text-[#717171]'>lub</span>
+                    <HashLink smooth to="/#kontakt" className='
                        font-montserrat inline-block px-5 py-2 rounded-lg bg-[#C9AB8B] text-white font-semibold hover:bg-[#b09274] transition-colors duration-300 w-fit transform hover:scale-105 hover:shadow-lg
                         '>Zadzwoń (+48) 533 087 918</HashLink>
-                    </Section>
                 </Section>
+            </Section>
 
-            </Container>
 
-            <FeatureImage src={dom3} title="Działka o wysokim potencjale?" subtitle="Projektujemy eleganckie, kameralne przestrzenie – z myślą o jakości życia i unikalnym charakterze miejsca." />
+            <FeatureImage src={dom3} title="Działka o wysokim potencjale?" subtitle="Odkupimy od Ciebie Twój teren lub wspólnie zbudujemy inwestycję i podzielimy się zyskiem." />
             <Section className="bg-[#FBFBFB]">
                 <Container className=''>
                     <div id="kgd_building" />
                     <div id="osoba_prywatna" />
                     <Section className='py-[32.0px] md:py-[40px] md:py-[80px]'>
-                        <H2 aos="fade-up" delay="100" className="text-center" separator={true}>Dla osoby prywatnej</H2>
-                        <P aos="fade-up" delay="200" className='mb-[32.0px] md:mb-[40px]'>Twój wymarzony dom – zaprojektowany i zbudowany przez ekspertów. Powiedz nam, jak chcesz mieszkać – my zajmiemy się resztą. Realizujemy indywidualne projekty domów jednorodzinnych, willi i rezydencji w najwyższym standardzie.</P>
+                        <H2 aos="fade-up" delay="100" className="text-center" separator={true}>KGD Building – dla osoby prywatnej</H2>
+                        <P aos="fade-up" delay="200" className='mb-[32.0px] md:mb-[40px]'>KGD Building to nasza marka powstała z myślą o pomocy indywidualnym klientom w realizacji ich marzenia o budowie wymarzonego domu.
+                            Twój dom – zaprojektowany i zbudowany przez ekspertów. Powiedz nam, jak chcesz mieszkać – my zajmiemy się resztą. Realizujemy indywidualne projekty domów jednorodzinnych, willi i rezydencji w najwyższym standardzie.</P>
                         <Section className="flex items-center justify-center">
                             <Link to="/indywidualna" className='
                        font-montserrat inline-block px-5 py-2 rounded-lg bg-[#C9AB8B] text-white font-semibold hover:bg-[#b09274] transition-colors duration-300 w-fit transform hover:scale-105 hover:shadow-lg
@@ -315,14 +343,13 @@ const HomePage = () => {
 
                 </Container>
             </Section>
-            <FeatureImage src={dom1} title="Twój wymarzony dom zaprojektowany i zbudowany przez ekspertów" subtitle="Rezydencje i wille szyte na miarę – architektura, wykonawstwo i nadzór w jednej ręce." />
+            <FeatureImage src={dom1} title="Twój wymarzony dom zaprojektowany i zbudowany przez ekspertów" subtitle="Rezydencje i wille szyte na miarę – zajmiemy się całym procesem od zakupu gruntu przez projekt oraz nadzór wykonawczy aż po odbiór i wykończenie wnętrz." />
             <Section className="bg-[#FBFBFB]">
                 <Container className=''>
                     <div id="dla_dewelopera" />
                     <Section className='py-[32.0px] md:py-[40px] md:py-[80px]'>
-                        <H2 aos="fade-up" delay="100" className="text-center" separator={true}>Dla dewelopera</H2>
-                        <P aos="fade-up" delay="200" className='mb-[32.0px] md:mb-[40px]'>Wspieramy  deweloperów – od projektu po sprzedaż.
-                            Masz grunt i pomysł na inwestycję, ale brakuje Ci czasu, zespołu lub doświadczenia? KGD wesprze Cię na każdym etapie prowadzenia małego projektu deweloperskiego.</P>
+                        <H2 aos="fade-up" delay="100" className="text-center" separator={true}>KGD Building – dla dewelopera</H2>
+                        <P aos="fade-up" delay="200" className='mb-[32.0px] md:mb-[40px]'>KGD Building wspiera także deweloperów – od projektu po sprzedaż. Masz grunt i pomysł na inwestycję, ale brakuje Ci czasu, zespołu lub doświadczenia? KGD wesprze Cię na każdym etapie prowadzenia projektu deweloperskiego.</P>
                         <Section className="flex items-center justify-center">
                             <Link to="/deweloper" className='
                        font-montserrat inline-block px-5 py-2 rounded-lg bg-[#C9AB8B] text-white font-semibold hover:bg-[#b09274] transition-colors duration-300 w-fit transform hover:scale-105 hover:shadow-lg
@@ -332,7 +359,7 @@ const HomePage = () => {
                     </Section>
                 </Container>
             </Section>
-            <FeatureImage src={dom2} title="Wspieramy deweloperów od projektu po sprzedaż" subtitle="Strategiczne wsparcie dla kameralnych inwestycji premium – doświadczenie, zespół i pełna realizacja pod marką KGD." />
+            <FeatureImage src={dom2} title="Wspieramy deweloperów od projektu po sprzedaż" subtitle="Strategiczne wsparcie dla inwestycji deweloperskich – bogate doświadczenie, zespół i kompleksowe wsparcie dewelopera na każdym etapie." />
 
             <Contact />
             <Footer />

@@ -3,23 +3,23 @@ import Hero from '../blocks/Hero'
 import Contact from '../blocks/Contact'
 import Footer from '../blocks/Footer'
 import Container from '../layout/Container'
+import TimeLine from '../blocks/TimeLine'
 import Section from '../layout/Section'
 import H2 from '../ui/H2'
 import P from '../ui/P'
-import { useLocation } from 'react-router-dom'
-import heroBg from '../../assets/images/image00003.png';
-import NavBar from '../blocks/NavBar'
-import TimeLine from '../blocks/TimeLine'
 import FeatureImage from '../layout/FeatureImage'
 import dom from '../../assets/images/Pylna_Dom_3_a.png'
+import dom2 from '../../assets/images/Pylna_Dom_5_b 3.png'
 import Ul from '../ui/Ul'
 import Li from '../ui/Li'
+import NavBar from '../blocks/NavBar'
+import { useLocation } from 'react-router-dom'
+import heroBg from '../../assets/images/image00003.png';
 import H3 from '../ui/H3'
 import Button from '../ui/Button'
-import Feature from '../blocks/Feature'
 import { Helmet } from 'react-helmet'
 import logo from '../../assets/logo/KGD-Builing-logo.svg'
-
+import Feature from '../blocks/Feature'
 
 const Individual = () => {
     const { pathname } = useLocation();
@@ -31,186 +31,182 @@ const Individual = () => {
         { label: 'KONTAKT', to: '#kontakt' },
     ];
 
+    const menuParams = {
+        phone: '(+48) 533 087 918'
+    }
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [pathname]);
     return (
         <Section className='overflow-x-hidden'>
             <Helmet>
-                <title>KGD-Group :: Doradztwo w procesie budowy domu</title>
-                <meta name="description" content="KGD-Group oferuje profesjonalne doradztwo w procesie budowy domu – od planowania, przez finansowanie, aż po nadzór inwestycji, aby Twoja budowa przebiegała sprawnie i bezpiecznie." />
-                <meta name="keywords" content="KGD-Group, budowa domu, doradztwo budowlane, wsparcie inwestycji, planowanie budowy, nadzór budowlany, konsulting dla deweloperów" />
+                <title>KGD Building Strategiczne doradztwo w procesie budowy domu</title>
+                <meta name="description" content="KGD Building oferuje profesjonalne doradztwo w procesie budowy domu – od planowania, przez finansowanie, aż po nadzór inwestycji, aby Twoja budowa przebiegała sprawnie i bezpiecznie." />
+                <meta name="keywords" content="KGD Building, budowa domu, doradztwo budowlane, wsparcie inwestycji, planowanie budowy, nadzór budowlany, konsulting dla deweloperów" />
             </Helmet>
 
-            <NavBar logo={logo} menuData={menuData} />
+            <NavBar logo={logo} menuData={menuData} menuParams={menuParams} />
             <Hero
                 bg={heroBg}
-                header="DORADZTWO W PROCESIE BUDOWY DOMU"
-                subHeader="Kompleksowe doradztwo w zakresie budowy wymarzonego domu."
+                header="KOMPLEKSOWE DORADZTWO W ZAKRSIE BUDOWY WYMARZONEGO DOMU"
+                subHeader="Bazując na naszym doświadczeniu zapewnimy Ci spokojną i skuteczną realizację całego procesu."
             />
-
             <Container>
                 <div id="wspolpraca" />
                 <Section className='py-[32.0px] md:py-[40px] md:py-[80px]'>
-                    <H2 className="text-center" separator={false}>DLACZEGO WARTO Z NAMI WSPÓŁPRACOWAĆ?</H2>
+                    <H2 separator={true} className="text-center">DLACZEGO WARTO Z NAMI WSPÓŁPRACOWAĆ?</H2>
+                    <P>Oszczędzasz czas i pieniądze - Nasz zespół ekspertów pomoże Ci uniknąć kosztownych błędów i przestojów. Dzięki wieloletniemu doświadczeniu wiemy, jak zoptymalizować proces budowy i zmieścić się w założonym budżecie.</P>
                 </Section>
 
-
             </Container>
-
             <Container>
-                <TimeLine
-                    index={1}
-                    header="Grunt to wiedza"
-                    content="Rozpoczynasz nowe przedsięwzięcie i chcesz, by stało się sukcesem otwierającym kolejne możliwości rozwoju na rynku nieruchomości? Oferujemy wsparcie oparte na kompetencjach z zakresu doradztwa strategicznego. Nasz zespół składa się z fachowców, których wiedza i doświadczenie są niezbędne do zbudowania solidnej marki na rynku. Świadczymy kompleksowe usługi wsparcia i doradztwa przez cały okres trwania procesu deweloperskiego."
+                <Feature
+                    icon={1}
+                    header="Zyskujesz spokój ducha"
+                    content="
+                        <p class='font-normal my-2'>Przejmujemy na siebie stres związany z:</p>
+                        <ul class='list-disc pl-6'>
+                            <li>Wyborem i weryfikacją wykonawców</li>
+                            <li>Kontrolą jakości prac</li>
+                            <li>Koordynacją ekip budowlanych</li>
+                            <li>Dokumentacją i formalnościami</li>   
+                            <li>Negocjacjami z dostawcami materiałów</li>   
+                        </ul>
+                    "
                 />
-                <TimeLine
-                    index={2}
-                    header="Od fundamentów"
-                    content="Nasz zespół tworzą specjaliści, którzy od lat realizują projekty na terenie Krakowa i okolic. Dzięki ugruntowanemu doświadczeniu na rynku nieruchomości wiemy, jak zwiększyć rentowność inwestycji oraz jak optymalnie rozplanować działania, by przyspieszyć realizację projektu. Mamy w portfolio wiele pomyślnie zrealizowanych inwestycji. Stworzyliśmy skuteczne plany finansowania dla licznych projektów, a wypracowana strategia pozwala nam ze spokojem podchodzić do każdego etapu inwestycji."
-                />
-                <TimeLine
-                    index={3}
-                    header="Aż po dach"
-                    content="Jak wygląda współpraca z naszym zespołem? Wsłuchujemy się w Twoją wizję i w zależności od potrzeb, zapewniamy kontakt z odpowiednimi specjalistami na każdym etapie realizacji inwestycji. Dzięki temu zyskujesz dostęp do przemyślanej strategii oraz sprawdzonych rozwiązań w zakresie finansowania, budowy i sprzedaży projektu. Nasza pomoc w dopełnieniu niezbędnych formalności pozwoli zaoszczędzić Twój czas i pieniądze. W ramach doradztwa strategicznego oferujemy spotkania mentoringowe dla deweloperów na każdym etapie realizacji inwestycji.
-                    Jeśli myśl o realizacji własnego pierwszego projektu deweloperskiego napędza Cię do działania, zrób to profesjonalnie - skorzystaj ze wsparcia fachowców i zwiększ swoje szanse na sukces. Od lat z powodzeniem przygotowujemy inwestycje, które budzą zainteresowanie już na etapie planowania. Dbamy o płynny przebieg kolejnych etapów procesu, usprawniając finansowanie i realizację inwestycji, co przekłada się na większy zysk inwestora."
-                    isLast={true}
+                <Feature
+                    icon={2}
+                    header="Realizujesz swoje marzenia"
+                    content="
+                        <p class='font-normal my-2'>Pomagamy przekuć Twoją wizję wymarzonego domu w rzeczywistość:</p>
+                        <ul class='list-disc pl-6'>
+                            <li>Dobieramy rozwiązania dopasowane do Twoich potrzeb</li>
+                            <li>Sugerujemy optymalne wykorzystanie przestrzeni</li>
+                            <li>Doradzamy w wyborze materiałów i technologii</li>
+                            <li>Pilnujemy, by efekt końcowy spełnił Twoje oczekiwania</li>   
+                        </ul>
+                    "
                 />
             </Container>
 
-            <FeatureImage src={dom} title="Wiedza, która przekłada się na zysk" subtitle="Strategiczne wsparcie na każdym etapie inwestycji – wiedza, doświadczenie i skuteczne narzędzia, które realnie zwiększają rentowność i przyspieszają realizację projektu." />
+            <FeatureImage src={dom} title="KGD BUILDING" subtitle="Współpraca z KGD to gwarancja realizacji Twojego projektu." />
 
             <Container>
                 <div id="wsparcie" />
                 <Section className='py-[32.0px] md:py-[40px] md:py-[80px]'>
-                    <H2 className="text-center" separator={true}>TAK MOŻEMY CI POMÓC</H2>
-                    <P className='!font-semibold'>Wybierz pełny pakiet wsparcia lub zdecyduj, w którym z obszarów potrzebujesz doradztwa.</P>
-                    <Feature
-                        icon={1}
-                        header="Projekt i Pozwolenie na budowę (PNB)"
-                        content="
-                        <ul class='list-disc pl-6'>
-                            <li>Oferujemy wieloletnie doświadczenie w analizie i audycie działek</li>
-                            <li>Sprawdzamy projekt i optymalizujemy go pod kątem rentowności</li>
-                            <li>W przypadku braku projektu - tworzymy go od podstaw</li>
-                            <li>Analizujemy konkurencję i precyzujemy profil grupy docelowej</li>
-                            <li>Doradzamy w zakresie optymalizacji kosztów realizacji projektu architektonicznego</li>
-                            <li>Weryfikujemy standard wykończenia</li>
-                            <li>Pomożemy w procesie uzyskania PNB, uzgodnień i formalności urzędowych</li>
-                        </ul>
-                    "
-                    />
-                    <Feature
-                        icon={2}
-                        header="Marketing i Sprzedaż"
-                        content="
-                        <ul class='list-disc pl-6'>
-                            <li>Tworzymy identyfikację wizualną inwestycji wraz z nazwą, stroną internetową</li>
-                            <li>Ustalamy efektywną strategię sprzedażową</li>
-                            <li>Projektujemy i opracowujemy materiały marketingowe oraz kampanie</li>
-                            <li>Zapewniamy wyselekcjonowany zespół specjalistów ds. sprzedaży</li>
-                            <li>Organizujemy biuro sprzedaży</li>
-                            <li>Przygotowujemy i obsługujemy umowy rezerwacyjne/deweloperskie</li>
-                            <li>Regularne raporty sprzedażowe pomagające w podejmowaniu decyzji</li>
-                        </ul>
-                    "
-                    />
-                    <Feature
-                        icon={3}
-                        header="Budowa"
-                        content="
-                        <ul class='list-disc pl-6'>
-                            <li>Współpraca ze sprawdzonymi wykonawcami gwarantującymi jakość</li>
-                            <li>Stały nadzór nad przebiegiem prac i kosztami</li>
-                            <li>Kontrola jakości na każdym etapie budowy</li>
-                            <li>Sprawne rozwiązywanie problemów technicznych</li>
-                            <li>Terminową realizację zgodną z harmonogramem</li>
-                        </ul>
-                    "
-                    />
-                    <Feature
-                        icon={4}
-                        header="Obsługa prawna i księgowa"
-                        content="
-                        <ul class='list-disc pl-6'>
-                            <li>Zapewniamy dostęp do wyspecjalizowanych doradców z doświadczeniem w zakresie bezpiecznych rozwiązań prawnych dla deweloperów</li>
-                            <li>Pomagamy w sporządzeniu projektu umowy deweloperskiej</li>
-                            <li>Wspieramy w przygotowaniu prospektu informacyjnego</li>
-                            <li>Przygotowujemy wzory umów z wykonawcami, zabezpieczające interesy inwestora</li>
-                            <li>Pomożemy w kwestiach księgowych oraz rozliczeniowych</li>
-                        </ul>
-                    "
-                    />
-                    <Feature
-                        icon={5}
-                        header="Obsługa finansowa"
-                        content="
-                        <ul class='list-disc pl-6'>
-                            <li>Zapewniamy wsparcie specjalistów w pozyskaniu kredytu deweloperskiego i planowaniu obsługi rachunków powierniczych</li>
-                            <li>Proponujemy rozwiązania w zakresie tworzenia opłacalnego biznesplanu oraz operatu szacunkowego</li>
-                            <li>Oferujemy bieżącą obsługę kredytu</li>
-                            <li>Dobieramy rozwiązania finansowe pozwalające stworzyć konkurencyjną ofertę na rynku nieruchomości</li>
-                        </ul>
-                    "
-                    />
-                    <Feature
-                        icon={6}
-                        header="Odbiory i rozliczenie inwestycji"
-                        content="
-                        <ul class='list-disc pl-6'>
-                            <li>Profesjonalne przygotowanie do odbiorów technicznych</li>
-                            <li>Sprawną koordynację przekazywania mieszkań</li>
-                            <li>Szybkie usuwanie usterek</li>
-                            <li>Wsparcie w okresie rękojmi</li>
-                            <li>Budowanie pozytywnych relacji z klientami</li>
-                        </ul>
-                    "
-                    />
-                    <Feature
-                        icon={7}
-                        header="Wykończenie pod klucz"
-                        content="
-                        <p>Kompleksowym wykończeniem wnętrz zajmuje się TEC Remodeling, który jest częścią TEC Group. Firma ma za sobą ponad 400 zrealizowanych remontów oraz wykończeń. Posiadamy nowoczesny sprzęt, zaplecze logistyczne oraz duży zespół specjalistów i fachowców branżowych. Dysponujemy własnych biurem architektonicznym TEC Architects, które zaprojektuje designerskie i funkcjonalne wnętrza wg. Twoich wytycznych.</p>
-                        <ul class='list-disc pl-6'>
-                            <li>Kompleksowa realizacja wykończenia mieszkań</li>
-                            <li>Atrakcyjne pakiety wykończeniowe dla Klientów</li>
-                            <li>Kontrola jakości wykonania</li>
-                            <li>Terminową realizację prac wykończeniowych</li>
-                            <li>Obsługa gwarancyjna</li>
-                        </ul>
-
-                    "
-                    />
+                    <H2 className="text-center" separator={false}>NASZE WSPARCIE OBEJMUJE</H2>
                 </Section>
+
             </Container>
+
+            <Container>
+                <Feature
+                    icon={1}
+                    header="Etap przygotowawczy"
+                    content="
+                        <ul class='list-disc pl-6'>
+                            <li>Analiza działki i jej potencjału</li>
+                            <li>Doradztwo w wyborze projektu</li>
+                            <li>Weryfikacja dokumentacji</li>
+                            <li>Pomoc w uzyskaniu pozwoleń</li>
+                            <li>Optymalizacja kosztów budowy</li>
+                            <li>Stworzenie realnego harmonogramu</li>
+                        </ul>
+                    "
+                />
+                <Feature
+                    icon={2}
+                    header="Organizacja budowy"
+                    content="
+        <ul class='list-disc pl-6'>
+            <li>Wybór sprawdzonych wykonawców</li>
+            <li>Negocjacje cen materiałów</li>
+            <li>Koordynacja dostaw</li>
+            <li>Nadzór nad pracami</li>
+            <li>Kontrola zgodności z projektem</li>
+            <li>Regularne raporty z postępu prac</li>
+        </ul>
+    "
+                />
+
+                <Feature
+                    icon={3}
+                    header="Kontrola finansów"
+                    content="
+        <ul class='list-disc pl-6'>
+            <li>Weryfikacja kosztorysów</li>
+            <li>Optymalizacja wydatków</li>
+            <li>Kontrola faktur i płatności</li>
+            <li>Zarządzanie budżetem</li>
+            <li>Rekomendacje oszczędności</li>
+        </ul>
+    "
+                />
+
+                <Feature
+                    icon={4}
+                    header="Wykończenie i odbiory"
+                    content="
+        <ul class='list-disc pl-6'>
+            <li>Koordynacja prac wykończeniowych</li>
+            <li>Doradztwo w wyborze materiałów</li>
+            <li>Nadzór nad montażem instalacji</li>
+            <li>Przygotowanie do odbiorów</li>
+            <li>Wsparcie w usuwaniu usterek</li>
+        </ul>
+    "
+                />
+
+                <Feature
+                    icon={5}
+                    header="Wsparcie techniczne"
+                    content="
+        <ul class='list-disc pl-6'>
+            <li>Nadzór nad jakością wykonania</li>
+            <li>Rozwiązywanie problemów technicznych</li>
+            <li>Doradztwo materiałowe</li>
+            <li>Kontrola zgodności z normami</li>
+            <li>Weryfikacja rozwiązań instalacyjnych</li>
+        </ul>
+    "
+                />
+
+            </Container>
+
             <Container>
                 <div id="twoje_korzysci" />
+                <Section className='mt-[80px]'>
+                    <H2 className="text-center" separator={true}>Twoje korzyści</H2>
+                </Section>
                 <Section className='mb-[80px]'>
-                    <H2 className="text-center" separator={true}>TWOJE KORZYŚCI</H2>
-                    <P className='mb-[32.0px] md:mb-[40px]'>Twój sukces na rynku deweloperskim jest naszym priorytetem. Przejmujemy na siebie wszystkie złożone aspekty procesu inwestycyjnego, byś mógł skupić się na strategicznych decyzjach i rozwoju swojego biznesu.</P>
                     <Ul>
-                        <Li>Oszczędność czasu i energii - zajmujemy się wszystkimi szczegółami</Li>
-                        <Li>Większy zysk dzięki optymalizacji kosztów i sprawnej sprzedaży</Li>
-                        <Li>Minimalizacja ryzyka dzięki naszemu doświadczeniu</Li>
-                        <Li>Terminowa realizacja zgodna z założeniami</Li>
-                        <Li>Zadowoleni klienci i pozytywne referencje</Li>
-                        <Li>Solidne podstawy do kolejnych inwestycji</Li>
+                        <Li>Oszczędność czasu - nie musisz być codziennie na budowie</Li>
+                        <Li>Kontrola kosztów - pomagamy zmieścić się w budżecie</Li>
+                        <Li>Najlepsze rozwiązania - doradzamy sprawdzone technologie</Li>
+                        <Li>Wysoka jakość - pilnujemy standardów wykonania</Li>
+                        <Li>Terminowa realizacja - dbamy o sprawny przebieg prac</Li>
+                        <Li>Bezpieczeństwo - weryfikujemy wszystkie formalności</Li>
                     </Ul>
                 </Section>
             </Container>
 
-            <FeatureImage src={dom} title="Korzyści ze współpracy z KGD" subtitle="Kompleksowe wsparcie inwestycji – oszczędność czasu, większy zysk, mniejsze ryzyko i wysoka jakość realizacji, która buduje Twoją markę." />
+            <FeatureImage src={dom2} title="KGD BUILDING" subtitle="Zaufaj profesjonalistom a zaoszczędzony czas poświęć na realizacje swoich hobby." />
 
-            <Section className='bg-[#C9AB8B]'>
+            <Section className='bg-[#ffffff]'>
                 <Container>
                     <Section className='py-[32.0px] md:py-[40px] md:py-[80px]'>
-                        <H3 className='!font-extralight text-center text-white  mb-[32.0px] md:mb-[40px]'>Skorzystaj z naszego doświadczenia i zrealizuj swoją inwestycję jak profesjonalista. Umów się na bezpłatną konsultację, podczas której omówimy Twój projekt i przedstawimy konkretne rozwiązania</H3>
-                        <Section className='flex justify-center'>
-                            <Button className="max-w-[620px]" type="secondary">Zadzwoń (+48) 533 087 918</Button>
-                        </Section>
+                        <H3 className='!font-extralight text-center '>Skorzystaj z bezpłatnej konsultacji. Omówimy Twoje potrzeby i zaproponujemy najlepsze rozwiązania.</H3>
+
                     </Section>
                 </Container>
             </Section>
+            <Section className='bg-[#C9AB8B]'>
+                    <Section className='flex justify-center'>
+                        <Button className="max-w-[620px]" type="primary">Zadzwoń (+48) 533 087 918</Button>
+                    </Section>
+            </Section>
+
             <Contact />
             <Footer />
         </Section>

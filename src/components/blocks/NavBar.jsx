@@ -3,7 +3,7 @@ import { Menu, X } from 'lucide-react';
 import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 
-const NavBar = ({ logo, menuData }) => {
+const NavBar = ({ logo, menuData, menuParams }) => {
 
 
     const [isScrolled, setIsScrolled] = useState(false);
@@ -86,7 +86,7 @@ const NavBar = ({ logo, menuData }) => {
                 </nav>
 
                 <div className="hidden xl:block font-poppins text-white font-light">
-                    <Link to={`tel:+48 518 451 555`}>+48 518 451 555</Link>
+                    <Link to={`tel:${menuParams.phone}`}>{menuParams.phone}</Link>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -100,7 +100,7 @@ const NavBar = ({ logo, menuData }) => {
 
             {/* Mobile Menu */}
             <div
-                className={`absolute top-full left-0 w-full ${isScrolled ? 'bg-black/85 ' : 'bg-black/50 '
+                className={`absolute top-full left-0 w-full ${isScrolled ? 'bg-zinc-900 ' : 'bg-zinc-900 '
                     } transition-all duration-300 xl:hidden ${isMenuOpen ? 'h-auto opacity-100' : 'h-0 opacity-0 pointer-events-none'
                     }`}
             >
